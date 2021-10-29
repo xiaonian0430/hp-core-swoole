@@ -1,5 +1,5 @@
 {
-    "name": "hiper/hp-core",
+    "name": "hiper/hp-core-swoole",
     "require": {
         "php": ">=7.0",
         "ext-json": "*"
