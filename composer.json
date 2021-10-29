@@ -1,0 +1,12 @@
+{
+    "name": "hiper/hp-core",
+    "require": {
+        "php": ">=7.0",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "HP\\Swoole\\": "swoole-worker/"
+        }
+    }
+}
