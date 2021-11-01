@@ -6,7 +6,8 @@
     },
     "autoload": {
         "psr-4": {
-            "HP\\Swoole\\": "swoole-worker/"
+            "HP\\Swoole\\": "swoole-worker/",
+            "HP\\": "framework/"
         }
     }
 }
