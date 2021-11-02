@@ -2,8 +2,7 @@
     "name": "hiper/hp-core-swoole",
     "require": {
         "php": ">=7.0",
-        "ext-json": "*",
-        "swoole/ide-helper": "*"
+        "ext-json": "*"
     },
     "autoload": {
         "psr-4": {
