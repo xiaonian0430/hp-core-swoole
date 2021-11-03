@@ -24,7 +24,8 @@ class App extends Core {
             'stats_file' => $this->temp_path . '/stats.log',
             'worker_num'=> CONFIG['HTTP_SERVER']['PROCESS_COUNT'],
             'task_tmpdir'=> $this->temp_path,
-            'max_coroutine'=> 100000
+            'max_coroutine'=> 100000,
+            'hook_flags' => SWOOLE_HOOK_ALL, // 建议开启
         ]);
 
         // 设置注册中心连接参数
