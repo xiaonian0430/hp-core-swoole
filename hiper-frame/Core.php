@@ -10,6 +10,8 @@ class Core {
     protected $log_path;
 
     public function __construct() {
+        ini_set('display_errors', 'on');
+        ini_set('date.timezone','Asia/Shanghai');
         defined('IN_PHAR') or define('IN_PHAR', boolval(\Phar::running(false)));
         defined('SERVER_ROOT') or define('SERVER_ROOT', IN_PHAR ? \Phar::running() : realpath(getcwd()));
         defined('PUBLIC_ROOT') or define('PUBLIC_ROOT', SERVER_ROOT.'/public'); //不能加后缀
@@ -48,6 +50,7 @@ class Core {
             exit($config_path." is not exist\n");
         }
         $conf_frame=[
+            'LOG_PATH'=>$this->log_path.'/app.log',
             'EVENT_LOOP'=>0,
             'HTTP_SERVER'    => [
                 'SERVER_NAME'    => 'HTTP_SERVER',
